@@ -1,0 +1,42 @@
+html {
+    height: 100%;
+}
+
+body {
+    /* height: 100%; */
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:
+        linear-gradient(to bottom right,
+            hsl(330, 100%, 49.02%),
+            rgb(28, 92, 156));
+}
+
+h1 {
+    color: white;
+    margin-left: 10px;
+}
+
+button {
+    width: 250px;
+    height: 100px;
+    /* background-color: rgb(255, 255, 244); */
+    border-radius: 10px;
+    /* border-color: white; */
+    border-width: 0;
+    /* opacity: 95%; */
+    margin-left: 40px;
+
+}
+
+#btn2 {
+    position: absolute;
+    /* left: ; */
+}
+
+#buttons-init {
+    margin-top: 20px;
+    margin-left: 10px;
+}
