@@ -31,7 +31,10 @@ button {
     margin-left: 40px;
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
-
+}
+button:hover{
+    box-shadow: 5px 5px 12px 2px rgb(192, 191, 191) inset;
+    cursor: grab;
 }
 
 #btn2 {
@@ -42,4 +45,21 @@ button {
 #buttons-init {
     margin-top: 20px;
     margin-left: 10px;
+}
+#good_choice_div{
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    padding: 15px; 
+}
+#good_choice_close{
+    display: inline;
+    background-color: beige;
+    padding: 3px;
+    position: relative;
+    top: -85px;
+    /* left: 10px; */
+    font-weight: 800;
+    left: 99.7%;
+    cursor: grab;
 }

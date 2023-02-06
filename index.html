@@ -12,16 +12,31 @@
 <body>
     <h1>Co dzisiaj robimy?</h1>
     <div id="buttons-init">
-        <button id="btn1" onmouseover="btn1_mouse_status(true)" onmouseout="btn1_mouse_status(false)">Oglądamy samochody</button>
+        <button onmousedown="good_choice_message()" id="btn1" onmouseover="btn1_mouse_status(true)" onmouseout="btn1_mouse_status(false)">Oglądamy samochody</button>
         <button id="btn2">Oglądamy Marvel</button>
+    </div>
+
+    <div id="good_choice_div" style="display: none;">
+        <h2>Świetny wybór!</h2>
+        <p>Skontaktuj sie ze swoim chlopakiem i jak najszybciej powiadom go o tej niesamoiwtej decyzji!</p>
+        <p id="good_choice_close" onmousedown="close_good_choice()">X</p>
     </div>
 
 
 
     <script>
-
+        good_choice_div = document.getElementById("good_choice_div");
         mouse_over_btn1 = false;
-        init_offset =
+
+        function close_good_choice(){
+            good_choice_div.setAttribute('style', 'display: none;')
+        }
+
+
+
+
+
+        
 
         function btn1_mouse_status(n){
             mouse_over_btn1  =n;
@@ -93,6 +108,11 @@
                 tp_btn2_to_random();
             }
         });
+
+        function good_choice_message(){
+
+            good_choice_div.setAttribute('style', 'display: block;')
+        }
 
     </script>
 </body>
