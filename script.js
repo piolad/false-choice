@@ -1,5 +1,10 @@
 good_choice_div = document.getElementById("good_choice_div");
+btn2 = document.getElementById('btn2');
 mouse_over_btn1 = false;
+
+function open_good_choice(){
+    good_choice_div.setAttribute('style', 'display: block;')
+}
 
 function close_good_choice(){
     good_choice_div.setAttribute('style', 'display: none;')
@@ -8,7 +13,6 @@ function btn1_mouse_status(n){
     mouse_over_btn1  =n;
 }
 
-btn2 = document.getElementById('btn2');
 
 //=======
 //copied from user brainjam from stack overflow:
@@ -37,9 +41,9 @@ function element_position(e) {
     } while (e = e.offsetParent);
     return { x: x, y: y };
 }
-//================================
+//===============================================================================
 
-function tp_btn2_to_random(){
+function tp_btn2(){
 
     var body = document.body,
     html = document.documentElement;
@@ -64,10 +68,6 @@ addEventListener('mousemove', (e)=>{
 
     max_size_btn2 = btn2.offsetWidth < btn2.offsetHeight ? btn2.offsetWidth : btn2.offsetHeight;
     if((distance < 1.4*max_size_btn2)&&!mouse_over_btn1){
-        tp_btn2_to_random();
+        tp_btn2();
     }
 });
-
-function good_choice_message(){
-    good_choice_div.setAttribute('style', 'display: block;')
-}
