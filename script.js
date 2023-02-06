@@ -4,6 +4,20 @@ btn2 = document.getElementById('btn2');
 h1 = document.getElementsByTagName('h1')[0];
 mouse_over_btn1 = false;
 
+//initialization from paramteres
+const params = new URLSearchParams(window.location.search);
+
+if (params.has('btn1')){
+    btn1.innerHTML = params.get('btn1');
+}
+
+if (params.has('btn2')){
+    btn2.innerHTML = params.get('btn2');
+}
+
+
+//========
+
 function open_good_choice(){
     good_choice_div.setAttribute('style', 'display: block;')
 }
