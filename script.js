@@ -1,5 +1,7 @@
 good_choice_div = document.getElementById("good_choice_div");
+btn1 = document.getElementById('btn1');
 btn2 = document.getElementById('btn2');
+h1 = document.getElementsByTagName('h1')[0];
 mouse_over_btn1 = false;
 
 function open_good_choice(){
@@ -10,12 +12,12 @@ function close_good_choice(){
     good_choice_div.setAttribute('style', 'display: none;')
 }
 function btn1_mouse_status(n){
-    mouse_over_btn1  =n;
+    mouse_over_btn1 = n;
 }
 
 
 //=======
-//copied from user brainjam from stack overflow:
+//from user: brainjam  @stack overflow:
 function getNumericStyleProperty(style, prop){
     return parseInt(style.getPropertyValue(prop),10) ;
 }
