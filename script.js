@@ -7,17 +7,35 @@ mouse_over_btn1 = false;
 //initialization from paramteres
 const params = new URLSearchParams(window.location.search);
 
-if (params.has('btn1')){
-    btn1.innerHTML = params.get('btn1');
-}
+if(params.has('base64')){
+    var base64 = params.get('base64');
+    var decoded = atob(base64);
+    var decoded_params = new URLSearchParams(decoded);
+    if (decoded_params.has('btn1')){
+        btn1.innerHTML = decoded_params.get('btn1');
+    }
 
-if (params.has('btn2')){
-    btn2.innerHTML = params.get('btn2');
-}
+    if (decoded_params.has('btn2')){
+        btn2.innerHTML = decoded_params.get('btn2');
+    }
 
-if (params.has('title')){
-    h1.innerHTML = params.get('title');
-    document.title = params.get('title');
+    if (decoded_params.has('title')){
+        h1.innerHTML = decoded_params.get('title');
+        document.title = decoded_params.get('title');
+    }
+}else{
+    if (params.has('btn1')){
+        btn1.innerHTML = params.get('btn1');
+    }
+
+    if (params.has('btn2')){
+        btn2.innerHTML = params.get('btn2');
+    }
+
+    if (params.has('title')){
+        h1.innerHTML = params.get('title');
+        document.title = params.get('title');
+    }
 }
 
 //========
