@@ -15,6 +15,10 @@ if (params.has('btn2')){
     btn2.innerHTML = params.get('btn2');
 }
 
+if (params.has('title')){
+    h1.innerHTML = params.get('title');
+    document.title = params.get('title');
+}
 
 //========
 
